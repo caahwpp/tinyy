@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>tiny angel 🖤 — conteúdo exclusivo</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Meu cantinho exclusivo 💋 Fotos, vídeos e muito mais. Acesso grátis — vem me conhecer! 🔥" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph (WhatsApp, Telegram, Facebook, etc.) -->
+  <meta property="og:type"        content="profile" />
+  <meta property="og:site_name"   content="tiny angel" />
+  <meta property="og:title"       content="tiny angel 🖤 — conteúdo exclusivo pra você" />
+  <meta property="og:description" content="Fotos e vídeos exclusivos, acesso grátis 🔥 Me segue no Instagram e entra no canal VIP do Telegram 💋" />
+  <meta property="og:image"       content="https://tiny.portalv9.com/Screenshot_1.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"   content="tiny angel — link bio" />
+  <meta property="og:url"         content="https://tiny.portalv9.com/bio" />
+  <meta property="og:locale"      content="pt_BR" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="tiny angel 🖤 — conteúdo exclusivo pra você" />
+  <meta name="twitter:description" content="Fotos e vídeos exclusivos, acesso grátis 🔥 Me segue no Instagram e entra no canal VIP do Telegram 💋" />
+  <meta name="twitter:image"       content="https://tiny.portalv9.com/Screenshot_1.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://tiny.portalv9.com/bio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :root {
+      --pink: #ff3c7e;
+      --pink-light: #ff6fa8;
+      --purple: #9b23ea;
+      --dark: #0a0a0f;
+      --card: rgba(255, 255, 255, 0.055);
+      --card-border: rgba(255, 60, 126, 0.22);
+    }
+
+    html {
+      height: -webkit-fill-available;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--dark);
+      overflow-x: hidden;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+    }
+
+    /* ─── HERO PHOTO ─────────────────────────── */
+    .hero {
+      position: relative;
+      width: 100%;
+      /* Alto o suficiente pra mostrar o rosto sem aparar os lados */
+      height: 92vw;
+      max-height: 520px;
+      min-height: 280px;
+      overflow: hidden;
+      background: var(--dark);
+      padding-top: env(safe-area-inset-top, 0px);
+    }
+
+    .hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      /* cover preenche a largura toda, sem barras brancas */
+      object-fit: cover;
+      /* 25% = mostra a parte de cima (rosto) sem subir demais */
+      object-position: center 25%;
+      display: block;
+    }
+
+    /* Gradiente que funde a foto com o fundo dark */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(to bottom,
+          rgba(10, 10, 15, 0.05) 0%,
+          rgba(10, 10, 15, 0.0) 35%,
+          rgba(10, 10, 15, 0.75) 78%,
+          rgba(10, 10, 15, 1) 100%);
+      pointer-events: none;
+    }
+
+    /* Brilho lateral decorativo */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 15% 50%, rgba(155, 35, 234, 0.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 50%, rgba(255, 60, 126, 0.18) 0%, transparent 55%);
+      z-index: 1;
+    }
+
+    /* ─── MAIN CONTENT ───────────────────────── */
+    .content {
+      position: relative;
+      z-index: 2;
+      /* Sobe um pouco sobre a hero */
+      margin-top: -56px;
+      padding: 0 1.1rem calc(2.5rem + env(safe-area-inset-bottom, 0px));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* ─── PROFILE NAME & BIO ─────────────────── */
+    .profile-name {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+
+    .profile-name span {
+      background: linear-gradient(90deg, var(--pink), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .profile-bio {
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.6);
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    /* ─── DIVIDER ────────────────────────────── */
+    .divider {
+      width: 50px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--pink), var(--purple));
+      border-radius: 99px;
+      margin: 0.2rem 0;
+    }
+
+    /* ─── LINKS ──────────────────────────────── */
+    .links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      min-height: 68px;
+      padding: 0.9rem 1.15rem;
+      border-radius: 20px;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.15s ease, box-shadow 0.2s;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      touch-action: manipulation;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    /* Overlay de hover/tap */
+    .link-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, var(--pink), var(--purple));
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      z-index: 0;
+    }
+
+    /* Shimmer animado */
+    .link-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.07), transparent);
+      animation: shimmer 3.5s infinite;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes shimmer {
+      0% {
+        left: -100%;
+      }
+
+      60% {
+        left: 150%;
+      }
+
+      100% {
+        left: 150%;
+      }
+    }
+
+    @media (hover: hover) {
+      .link-btn:hover {
+        transform: translateY(-3px) scale(1.01);
+        box-shadow: 0 10px 36px rgba(255, 60, 126, 0.28);
+        border-color: var(--pink);
+      }
+
+      .link-btn:hover::before {
+        opacity: 0.14;
+      }
+
+      .link-btn:hover .link-arrow {
+        color: var(--pink);
+        transform: translateX(4px);
+      }
+    }
+
+    .link-btn:active {
+      transform: scale(0.96);
+      box-shadow: 0 4px 22px rgba(255, 60, 126, 0.35);
+      border-color: var(--pink);
+    }
+
+    .link-btn:active::before {
+      opacity: 0.2;
+    }
+
+    /* ── Botão DESTAQUE (Instagram) ── */
+    .link-btn.featured {
+      background: linear-gradient(125deg, #ee2a7b 0%, #9b23ea 100%);
+      border-color: transparent;
+      box-shadow: 0 6px 28px rgba(238, 42, 123, 0.4);
+      min-height: 74px;
+    }
+
+    .link-btn.featured::before {
+      background: linear-gradient(120deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.0));
+      opacity: 1;
+    }
+
+    .link-btn.featured:active {
+      box-shadow: 0 2px 14px rgba(238, 42, 123, 0.5);
+    }
+
+    .link-btn.featured .link-label {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .link-btn.featured .link-arrow {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* ── Badge NOVO ── */
+    .badge {
+      position: relative;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      background: var(--pink);
+      color: #fff;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 2px 6px;
+      border-radius: 6px;
+      margin-left: 6px;
+      vertical-align: middle;
+      animation: badgePulse 2s infinite;
+    }
+
+    @keyframes badgePulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 60, 126, 0.5);
+      }
+
+      50% {
+        box-shadow: 0 0 0 4px rgba(255, 60, 126, 0);
+      }
+    }
+
+    /* ── Contador de itens ── */
+    .link-count {
+      position: relative;
+      z-index: 2;
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.4);
+      font-weight: 400;
+      margin-top: 1px;
+    }
+
+    .link-icon {
+      position: relative;
+      z-index: 2;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .link-icon.instagram {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .link-icon.mega {
+      background: linear-gradient(135deg, #e42b2b, #a00000);
+    }
+
+    .link-icon.videos {
+      background: linear-gradient(135deg, #ff3c7e, #9b23ea);
+    }
+
+    .link-icon.telegram {
+      background: linear-gradient(135deg, #229ed9, #0c7ab0);
+    }
+
+    .link-text {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .link-label {
+      font-size: 0.68rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.38);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .link-title {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .link-arrow {
+      position: relative;
+      z-index: 2;
+      color: rgba(255, 255, 255, 0.28);
+      font-size: 1.5rem;
+      font-weight: 300;
+      flex-shrink: 0;
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    /* ─── PARTICLES ──────────────────────────── */
+    .particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0;
+      animation: floatUp var(--d, 7s) var(--delay, 0s) infinite ease-in;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 0.55;
+      }
+
+      90% {
+        opacity: 0.25;
+      }
+
+      100% {
+        transform: translateY(-8vh) scale(1.4);
+        opacity: 0;
+      }
+    }
+
+    /* ─── FOOTER ─────────────────────────────── */
+    .footer {
+      font-size: 0.73rem;
+      color: rgba(255, 255, 255, 0.18);
+      text-align: center;
+      letter-spacing: 0.05em;
+      margin-top: 0.4rem;
+    }
+
+    /* Pulse dot */
+    .pulse-dot {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--pink);
+      margin-right: 5px;
+      position: relative;
+      top: -1px;
+      animation: pulse 1.6s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 60, 126, 0.6);
+      }
+
+      50% {
+        box-shadow: 0 0 0 6px rgba(255, 60, 126, 0);
+      }
+    }
+
+    /* ─── TELAS PEQUENAS (< 380px) ───────────── */
+    @media (max-width: 380px) {
+      .hero {
+        height: 80vw;
+        max-height: 360px;
+      }
+
+      .profile-name {
+        font-size: 1.6rem;
+      }
+
+      .link-btn {
+        min-height: 60px;
+        padding: 0.75rem 1rem;
+      }
+
+      .link-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.25rem;
+        border-radius: 12px;
+      }
+
+      .link-title {
+        font-size: 0.95rem;
+      }
+
+      .content {
+        gap: 0.85rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="particles" id="particles"></div>
+
+  <!-- Hero photo -->
+  <div class="hero">
+    <img src="Screenshot_1.png" alt="tiny angel" />
+  </div>
+
+  <!-- Profile content -->
+  <div class="content">
+
+    <div class="profile-name"><span>tiny angel</span> 🌸</div>
+
+    <p class="profile-bio">
+      <span class="pulse-dot"></span>conteúdo exclusivo só pra você 💋<br />
+      clica e vem me conhecer melhor 🔥
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="links">
+
+      <!-- Instagram — destaque -->
+      <a href="https://tiny.portalv9.com/ksx" target="_blank" rel="noopener" class="link-btn featured">
+        <div class="link-icon instagram">📸</div>
+        <div class="link-text">
+          <span class="link-label">me segue lá</span>
+          <span class="link-title">Instagram</span>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+
+      <!-- Fotos -->
+      <a href="https://tiny.portalv9.com/ksx" target="_blank" rel="noopener" class="link-btn">
+        <div class="link-icon mega">📂</div>
+        <div class="link-text">
+          <span class="link-label">conteúdo exclusivo</span>
+          <span class="link-title">Minhas Fotinhas 🔥 <span class="badge">novo</span></span>
+          <span class="link-count">📷 fotos disponíveis · acesso grátis</span>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+
+      <!-- Vídeos -->
+      <a href="https://tiny.portalv9.com/ksx" target="_blank" rel="noopener" class="link-btn">
+        <div class="link-icon videos">🎬</div>
+        <div class="link-text">
+          <span class="link-label">conteúdo exclusivo</span>
+          <span class="link-title">Videozinhos 💋 <span class="badge">novo</span></span>
+          <span class="link-count">🎥 vídeos · acesso grátis</span>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+
+      <!-- Telegram -->
+      <a href="https://tiny.portalv9.com/ksx" target="_blank" rel="noopener" class="link-btn">
+        <div class="link-icon telegram">✈️</div>
+        <div class="link-text">
+          <span class="link-label">canal vip</span>
+          <span class="link-title">Telegram</span>
+          <span class="link-count">🔒 conteúdo diário exclusivo</span>
+        </div>
+        <span class="link-arrow">›</span>
+      </a>
+
+    </div>
+
+    <p class="footer">© 2025 tiny angel · all rights reserved 🖤</p>
+  </div>
+
+  <script>
+    const c = document.getElementById('particles');
+    for (let i = 0; i < 22; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const size = (2 + Math.random() * 3).toFixed(1) + 'px';
+      p.style.cssText = `
+        width:${size}; height:${size};
+        left:${(Math.random() * 100).toFixed(1)}%;
+        background:${Math.random() > .5 ? '#ff3c7e' : '#9b23ea'};
+        --d:${(5 + Math.random() * 8).toFixed(1)}s;
+        --delay:${(Math.random() * 9).toFixed(1)}s;
+      `;
+      c.appendChild(p);
+    }
+  </script>
+</body>
+
+</html>
